@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+ul {
+    /* 子要素を横向きにする */
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.flex-box {
+    border: 1px solid #000000; /*線の設定*/
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+@media screen and (max-width: 767px) {
+    ul {
+        flex-direction: column;
+    }
+
+    li {
+        border-bottom: 1px solid #000000; /*線の設定*/
+        padding: 2px 8px; /*余白の設定*/
+    }
+
+    .flex-box {
+        border-left: none;
+        border-bottom: 1px solid #000000; /*線の設定*/
+        padding: 2px 8px; /*余白の設定*/
+    }
+}
