@@ -1,5 +1,11 @@
 @charset "utf-8";
 
+.hedaer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 ul {
     /* 子要素を横向きにする */
     display: flex;
@@ -13,9 +19,11 @@ ul {
     border-top: none;
     border-right: none;
     border-bottom: none;
+    padding-left: 20px;
 }
 
 @media screen and (max-width: 767px) {
+    .hedaer,
     ul {
         flex-direction: column;
     }
