@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+head {
+    background-color: #eeeeee;
+    max-width: 960px;
+}
+h1 {
+    margin: 50px;
+    color: #46759b;
+    text-align: center;
+}
+
+ul {
+    /* 子要素を横向きにする */
+    display: flex;
+    gap: 20px;
+    /* flex-wrapプロパティは、フレックスアイテムの折り返しを指定 */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+h2 {
+    margin: 10px;
+    color: #46759b;
+    border-left: 10px solid #46759b; /*線の設定*/
+    padding: 2px 8px; /*余白の設定*/
+}
+
+.box-model {
+    margin: 0 auto;
+    height: 300px;
+    width: 300px;
+    background-color: #ffffff;
+}
+
+img {
+    width: 100%;
+}
+
+@media screen and (max-width: 400px) {
+    ul {
+        flex-direction: column;
+    }
+
+    h2 {
+        border-left: 10px solid #46759b; /*線の設定*/
+        padding: 2px 8px; /*余白の設定*/
+    }
+
+    img {
+        width: 100%;
+    }
+}
