@@ -15,7 +15,7 @@ ul {
     display: flex;
     gap: 20px;
     /* flex-wrapプロパティは、フレックスアイテムの折り返しを指定 */
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: space-between;
     max-width: 960px;
     margin: 0 auto;
@@ -30,7 +30,7 @@ h2 {
 
 .box-model {
     margin: 0 auto;
-    height: 300px;
+    padding-bottom: 20px;
     width: 300px;
     background-color: #ffffff;
 }
