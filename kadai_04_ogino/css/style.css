@@ -4,7 +4,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* 140px / 1920px = 0.0729 */
     padding-right: 7.29%;
     padding-left: 2.7%;
     position: absolute;
@@ -76,41 +75,34 @@
     padding-top: 50px;
     padding-bottom: 50px;
     display: flex;
+    align-items: center;
 }
 
 .drink_pic {
-    width: 500px;
-    height: 560px;
-    /* padding-right: 77px; */
+    width: 50%;
+}
+
+.drink_pic_shape {
     border-bottom-right-radius: 50px;
 }
 
 .about_us_info {
-    /* margin: 0 0 0 80px; */
+    width: 50%;
     padding: 0 0 0 80px;
 }
 
 .about_us_text {
     height: 78px;
     width: 272px;
-    padding-top: 65px;
     padding-bottom: 58px;
 }
 
 #about_us_word {
-    /* margin: 0 auto; */
-    /* padding-top: 62px;
-    padding-bottom: 46px; */
-    width: 339px;
     font-weight: lighter;
     font-size: 44px;
     line-height: 1.39;
 }
 #about_us_detail {
-    /* margin: 0 auto; */
-    /* padding-top: 62px;
-    padding-bottom: 46px; */
-    width: 411px;
     font-weight: lighter;
     font-size: 16px;
     line-height: 1.63;
@@ -124,23 +116,16 @@
     /* 子要素を横向きにする */
     display: flex;
     gap: 20px;
-    /* flex-wrapプロパティは、フレックスアイテムの折り返しを指定 */
-    /* flex-wrap: wrap; */
     justify-content: space-between;
     max-width: 1000px;
     margin: 0 auto;
-    /* width: 300px;
-    height: 200px;
-    border-top-right-radius: 25px; */
 }
 
 #MENU li {
-    width: 300px;
+    width: 30%;
 }
 
 .menu_pic img {
-    /* width: 300px; */
-    height: 200px;
     border-top-right-radius: 25px;
 }
 
@@ -150,7 +135,6 @@
     font-weight: lighter;
     font-size: 38px;
     margin-top: -20px;
-    /* width: 300px; */
 }
 
 .menu_detail p {
@@ -166,23 +150,10 @@
 .photo ul {
     /* 子要素を横向きにする */
     display: flex;
-
-    /* flex-wrapプロパティは、フレックスアイテムの折り返しを指定 */
-    /* flex-wrap: wrap; */
-    /* justify-content: space-between; */
-    /* margin: 0 auto; */
-    /* width: 300px;
-     height: 200px;
-     border-top-right-radius: 25px; */
 }
 
-.photo img {
-    /* width: 100%; */
-    height: 311px;
-    /* display: block; */
-    /* width: 100%; */
-    /* background-size: cover; */
-    /* background-position: center; */
+.photo li {
+    width: 20%;
 }
 
 #event_text {
@@ -192,8 +163,6 @@
 .box-model {
     text-align: center;
     margin: 0 auto;
-    height: 200px;
-    width: 1000px;
     background-color: rgb(255, 255, 255);
     border: 2px solid #4f260b;
     font-weight: lighter;
@@ -202,13 +171,12 @@
 
 .box-model ul {
     flex-direction: row;
-    /* display: flex; */
-    /* text-align: center; */
+    max-width: 660px;
+    margin: 0 auto;
 }
 
 .box-model li {
     display: flex;
-    /* text-align: center; */
 }
 
 .day1 {
@@ -216,7 +184,6 @@
 }
 
 .day {
-    padding-left: 161px;
     padding-right: 55px;
     padding-bottom: 25px;
 }
@@ -267,8 +234,8 @@
 
 .pagetop {
     position: fixed;
-    bottom: 227px;
-    right: 285px;
+    bottom: 20px;
+    right: 20px;
     width: 125px;
     height: 125px;
 }
@@ -276,4 +243,91 @@
 .pagetop a {
     display: block;
     text-decoration: none;
+}
+
+.hamburger,
+.header-nav-sp {
+    display: none;
+}
+
+@media screen and (max-width: 1100px) {
+    .header-nav {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        /* 重なり順　position があるときの最前面（最大値9999）（最小値－1）　 */
+        z-index: 9999;
+    }
+
+    .hamburger span {
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        top: 13px;
+        transition: 0.3s;
+    }
+    .hamburger span::before {
+        position: absolute;
+        content: "";
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        top: -13px;
+        transition: 0.3s;
+    }
+    .hamburger span::after {
+        position: absolute;
+        content: "";
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        bottom: -13px;
+        transition: 0.3s;
+    }
+
+    /* openが付いた時×を作る */
+    .open span {
+        background-color: transparent;
+    }
+
+    .open span::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    .open span::after {
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+
+    .header-nav-sp {
+        position: absolute;
+        background-color: #000000c4;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .header-nav-sp ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        gap: 20px;
+    }
+    .header-nav-sp li {
+        color: #fff;
+        font-family: "游ゴシック体", YuGothic, "游ゴシック Medium",
+            "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+    }
 }

@@ -8,6 +8,9 @@
     <!-- CSS読み込み -->
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+
+    <!-- ▼jQuery読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -38,8 +41,41 @@
                 </ul>
             </nav>
         </div>
-        <img id="caffe_pic" src="./images/pc_first-100.jpg" alt="カフェ店内の様子" />
+
+        <div class="hamburger">
+            <span></span>
+        </div>
+
+        <nav class="header-nav-sp">
+            <ul>
+                <li>
+                    <a href="#ABOUT_US">ABOUT US</a>
+                </li>
+                <li>
+                    <a href="#MENU">MENU</a>
+                </li>
+                <li>
+                    <a href="#GALLERY">GALLERY</a>
+                </li>
+                <li>
+                    <a href="#EVENT">EVENT</a>
+                </li>
+                <li>
+                    <a href="#ACCESS">ACCESS</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div>
+            <picture>
+                <source srcset="./images/sp_main_vs@2x-100.jpg" media="(max-width:767px)" />
+                <img id="caffe_pic" src="./images/pc_first-100.jpg" alt="カフェ店内の様子" />
+            </picture>
+        </div>
+
     </header>
+
+
 
     <div class="main">
 
@@ -56,12 +92,12 @@
         <section id="ABOUT_US">
             <div class="max-width">
                 <div class="about_us_inner">
-
-                    <img class="drink_pic" src="./images/pc_about-100.jpg" alt="ドリンクの写真" />
-
+                    <div class="drink_pic">
+                        <img class="drink_pic_shape" src="./images/pc_about-100.jpg" alt="ドリンクの写真" />
+                    </div>
                     <div class="about_us_info">
                         <img class="about_us_text" src="./images/about_us@2x.png" alt="about_usテキスト" />
-                        <p id="about_us_word">私たちが提供するこだわりのコーヒー</p>
+                        <p id="about_us_word">私たちが提供する<br>こだわりのコーヒー</p>
 
                         <p id="about_us_detail">
                             サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
@@ -143,7 +179,7 @@
                     <img id="event_text" src="./images/event@2x.png" alt="eventテキスト" />
                 </div>
                 <div class="box-model">
-                    <ul class="day1">
+                    <!-- <ul class="day1">
                         <li>
                             <p class="day">2020.06.23</p>
                             <p class="event">7月はイベント出店のため0/0お休みします</p>
@@ -155,6 +191,22 @@
                         </li>
                     </ul>
                     <ul class="day3">
+                        <li>
+                            <p class="day">2020.02.06</p>
+                            <p class="event">コーヒーの日で30％OFFイベントを開催［3日間限定］</p>
+                        </li>
+                    </ul> -->
+
+
+                    <ul>
+                        <li class="day1">
+                            <p class="day">2020.06.23</p>
+                            <p class="event">7月はイベント出店のため0/0お休みします</p>
+                        </li>
+                        <li>
+                            <p class="day">2020.03.15</p>
+                            <p class="event">春の新商品新発売。話題のあのブランドとコラボ</p>
+                        </li>
                         <li>
                             <p class="day">2020.02.06</p>
                             <p class="event">コーヒーの日で30％OFFイベントを開催［3日間限定］</p>
@@ -195,7 +247,14 @@
         </a>
     </div>
 
-
+    <script>
+        $(function () {
+            $(".hamburger").click(function () {
+                $(".hamburger").toggleClass("open");
+                $(".header-nav-sp").fadeToggle();
+            });
+        });
+    </script>
 
 </body>
 
