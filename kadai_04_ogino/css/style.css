@@ -71,6 +71,10 @@
     margin-bottom: 40px;
 }
 
+#ABOUT_US_SP .about_us_info {
+    display: none;
+}
+
 .about_us_inner {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -108,6 +112,14 @@
     line-height: 1.63;
 }
 
+#MENU {
+    display: block;
+}
+
+#MENU_SP {
+    display: none;
+}
+
 .menu_text {
     width: 151px;
 }
@@ -141,6 +153,14 @@
     font-weight: lighter;
     font-size: 17px;
     line-height: 1.47;
+}
+
+#GALLERY {
+    display: block;
+}
+
+#GALLERY_SP {
+    display: none;
 }
 
 #gallery_text {
@@ -251,6 +271,33 @@
 }
 
 @media screen and (max-width: 1100px) {
+    #Ewords {
+        font-size: 30px;
+        font-weight: lighter;
+    }
+
+    #title {
+        margin: 0 auto;
+        padding-top: 62px;
+        padding-bottom: 46px;
+        font-weight: lighter;
+        font-size: 70px;
+        line-height: 1.17;
+        letter-spacing: 0.1em;
+    }
+
+    #words {
+        font-size: 23px;
+        line-height: 1.65;
+        letter-spacing: 0.1em;
+    }
+
+    #about_us_word {
+        font-weight: lighter;
+        font-size: 35px;
+        line-height: 1.39;
+    }
+
     .header-nav {
         display: none;
     }
@@ -329,5 +376,245 @@
             "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
         font-weight: bold;
         font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .explanation {
+        padding-top: 41px;
+        padding-bottom: 66px;
+        text-align: center;
+    }
+
+    #Ewords {
+        font-size: 17px;
+        font-weight: lighter;
+    }
+
+    #title {
+        margin: 0 auto;
+        padding-top: 32px;
+        padding-bottom: 46px;
+        font-weight: lighter;
+        font-size: 38px;
+        line-height: 1.16;
+        letter-spacing: 0.02em;
+    }
+
+    #words {
+        font-size: 16px;
+        line-height: 1.88;
+        letter-spacing: 0.1em;
+    }
+
+    .title_text {
+        height: 45px;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 21px;
+    }
+
+    #ABOUT_US .about_us_inner {
+        display: none;
+    }
+
+    #ABOUT_US_SP .about_us_info {
+        display: block;
+    }
+
+    #about_us_word {
+        font-weight: lighter;
+        font-size: 35px;
+        line-height: 1.39;
+    }
+
+    .about_us_inner {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        display: block;
+        align-items: center;
+    }
+
+    .about_us_info {
+        width: 100%;
+        padding: 0px;
+    }
+
+    .about_us_text {
+        height: 45px;
+        width: 160px;
+        padding-bottom: 17px;
+    }
+
+    .drink_pic {
+        width: 100%;
+    }
+
+    .drink_pic_shape {
+        border-bottom-right-radius: 0px;
+    }
+
+    #about_us_detail {
+        font-weight: lighter;
+        font-size: 16px;
+        line-height: 1.63;
+    }
+
+    #MENU {
+        display: none;
+    }
+
+    #MENU_SP {
+        display: block;
+    }
+
+    .menu_text {
+        width: 88px;
+    }
+
+    #MENU {
+        display: none;
+    }
+
+    #MENU_SP ul {
+        /* 子要素を横向きにする */
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        /* justify-content: space-between; */
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    #MENU_SP li {
+        width: 30%;
+    }
+
+    .menu {
+        margin: 0 auto;
+    }
+
+    .pic {
+        border-top-right-radius: 25px;
+    }
+
+    .title {
+        color: red;
+        text-align: left;
+        font-weight: lighter;
+        font-size: 38px;
+        margin-top: -35px;
+    }
+
+    .detail {
+        font-weight: lighter;
+        font-size: 17px;
+        line-height: 1.47;
+        padding-bottom: 55px;
+    }
+
+    #GALLERY {
+        display: none;
+    }
+
+    #GALLERY_SP {
+        display: block;
+    }
+
+    #gallery_text {
+        width: 142px;
+    }
+    /* 
+    .photo ul {
+        display: flex;
+    } */
+
+    .photo li {
+        width: 100%;
+    }
+
+    #event_text {
+        width: 100px;
+    }
+
+    .box-model {
+        text-align: start;
+        margin: 0 auto;
+        background-color: rgb(255, 255, 255);
+        border: 2px solid #4f260b;
+        font-weight: lighter;
+        font-size: 16px;
+        padding-left: 30px;
+    }
+
+    .box-model ul {
+        flex-direction: row;
+        max-width: 660px;
+        margin: 0px;
+    }
+
+    .box-model li {
+        display: block;
+    }
+
+    .day1 {
+        padding-top: 21px;
+    }
+
+    .day {
+        padding-right: 0px;
+        padding-bottom: 0px;
+    }
+    .event {
+        text-decoration: underline;
+        padding-bottom: 18px;
+    }
+
+    #access_text {
+        width: 124px;
+    }
+
+    .map {
+        height: 475px;
+        filter: grayscale(100%) invert(92%) contrast(83%);
+    }
+
+    .footer_inner {
+        max-width: 1000px;
+        display: block;
+        padding-top: 48px;
+        padding-left: 20px;
+        margin: 0 auto;
+    }
+
+    .footer_inner .footer_text {
+        width: 227px;
+        height: 50px;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .footer_inner .info {
+        margin-left: 65px;
+    }
+
+    .footer_inner .info p {
+        padding-bottom: 20px;
+        font-size: 18px;
+    }
+
+    #company {
+        text-align: center;
+        padding-top: 47px;
+        padding-bottom: 33px;
+        font-size: 16px;
+    }
+
+    .header-nav {
+        display: none;
     }
 }
