@@ -489,7 +489,7 @@
     }
 
     #MENU_SP li {
-        width: 30%;
+        width: 100%;
     }
 
     .menu {
@@ -546,7 +546,7 @@
         border: 2px solid #4f260b;
         font-weight: lighter;
         font-size: 16px;
-        padding-left: 30px;
+        padding: 0 30px;
     }
 
     .box-model ul {
@@ -570,6 +570,12 @@
     .event {
         text-decoration: underline;
         padding-bottom: 18px;
+        /* 改行をしない */
+        white-space: nowrap;
+        /* x軸のはみ出した部分を削除 */
+        overflow-x: hidden;
+        /* はみ出した部分を・・・に変更 */
+        text-overflow: ellipsis;
     }
 
     #access_text {
@@ -612,6 +618,14 @@
         padding-top: 47px;
         padding-bottom: 33px;
         font-size: 16px;
+    }
+
+    .pagetop {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 100px;
+        height: 100px;
     }
 
     .header-nav {
