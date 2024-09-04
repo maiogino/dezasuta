@@ -168,6 +168,10 @@
     width: 245px;
 }
 
+.lb-data .lb-number {
+    display: none !important;
+}
+
 .photo ul {
     /* 子要素を横向きにする */
     display: flex;
