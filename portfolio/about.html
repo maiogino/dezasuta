@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="./css/style_workall.css">
     <link rel="stylesheet" href="./css/about.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
     <script>
         (function (d) {
             var config = {
@@ -46,9 +48,30 @@
             </nav>
         </div>
 
+        <div class="hamburger">
+            <span></span>
+        </div>
+
         <picture>
-            <img src="./picture/1x/NAVI.png" alt="空の写真" />
+            <img src="./picture/1x/HOME1.png" alt="海の写真" />
         </picture>
+
+        <nav class="header-nav-sp">
+            <ul>
+                <li>
+                    <a href="./index.html">HOME</a>
+                </li>
+                <li>
+                    <a href="./work_all.html">WORKS</a>
+                </li>
+                <li>
+                    <a href="./about.html">ABOUT</a>
+                </li>
+                <li>
+                    <a href="./contact.html">CONTACT</a>
+                </li>
+            </ul>
+        </nav>
     </header>
 
     <div class="About">
@@ -58,7 +81,7 @@
                 <p class="sub_title">わたしについて</p>
             </div>
             <div class="my_pic">
-                <div>
+                <div class="my-profile">
                     <p class="about_me_text">
                         当ポートフォリオサイトにご訪問いただきありがとうございます。
                         素材系メーカーの研究員として勤務しているときに、プログラミングに触れる機会があり、
@@ -113,7 +136,7 @@
                         </ul>
                     </div>
                 </div>
-                <img src="./picture/1x/About1.png">
+                <div class="my_pic-img"><img src="./picture/1x/About1.png"></div>
 
 
             </div>
@@ -154,7 +177,7 @@
                 <p class="work_contact">Contact</p>
                 <p class="sub_title_contact">お問い合わせ</p>
                 <p>
-                    <a class="btn_contact btn_blue" href="./contact.html">
+                    <a class="btn_contact btn_blue contact-btn" href="./contact.html">
                         Maiを訪ねる
                     </a>
                 </p>
@@ -163,23 +186,33 @@
     </div>
 
     <footer class="footer">
-        <div class="footer_inner">
-            <nav class="footer-nav">
-                <ul>
-                    <li>
-                        <a href="./work_all.html">WORKS</a>
-                    </li>
-                    <li>
-                        <a href="./about.html">ABOUT</a>
-                    </li>
-                    <li>
-                        <a href="./contact.html">CONTACT</a>
-                    </li>
-                </ul>
-            </nav>
+        <div class="max-width">
+            <div class="footer_inner">
+                <nav class="footer-nav">
+                    <ul>
+                        <li>
+                            <a href="./work_all.html">WORKS</a>
+                        </li>
+                        <li>
+                            <a href="./about.html">ABOUT</a>
+                        </li>
+                        <li>
+                            <a href="./contact.html">CONTACT</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <p id="company">©︎2024 mai All rights reserved.</p>
         </div>
-        <p id="company">©︎2024 mai All rights reserved.</p>
     </footer>
+    <script>
+        $(function () {
+            $(".hamburger").click(function () {
+                $(".hamburger").toggleClass("open");
+                $(".header-nav-sp").fadeToggle();
+            });
+        });
+    </script>
 </body>
 
 </html>

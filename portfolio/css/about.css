@@ -4,9 +4,14 @@
     background-color:#edfafd ;
     margin-top: -450px;
 }
-
+@media screen and (max-width:1115px) {
+    .About{
+        margin-top: -300px;
+    }
+}
 .about_me{
-    margin: 0 166px;
+    margin: 150px auto 0;
+    max-width: 1000px;
 }
 
 .about_only{
@@ -17,9 +22,12 @@
 .my_pic{
 display: flex;
 justify-content: flex-end;
+margin: 0 10px;
 }
-
-.my_pic img{
+.my-profile{
+    width: 53.4%;
+}
+.my_pic-img{
     width: 46.8%;
 }
 
@@ -62,11 +70,25 @@ justify-content: flex-end;
 
 .skills_section{
     width: 100%;
+    position: relative;
 }
 
 .skills{
-    margin: -900px 166px 0 166px;
+    margin: 0 auto;
     height: auto;
+    padding: 0 16px;
+    max-width: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+@media screen and (max-width:1200px) {
+  .skills_section .background_skills{
+    height: 1110px;
+    object-fit: cover;
+  }
 }
 
 .skills_type{
@@ -106,7 +128,7 @@ justify-content: flex-end;
 }
 
 .about_contact{
-    margin: 200px 0 0;
+    /* margin: 200px 0 0; */
     padding-bottom: 100px;
 }
 /* .work_contact{

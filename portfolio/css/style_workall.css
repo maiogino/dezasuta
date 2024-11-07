@@ -1,41 +1,21 @@
 @charset "utf-8";
 
-/* .logo {
-    font-family: zen-old-mincho, sans-serif;
-    color: #fff;
+#home_workall_SP{
+    display: none;
 }
-
-.header_inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 30px;
-    padding-right: 2.73%;
-    padding-left: 2.73%;
-    position: absolute;
-    width: 100%;
-    z-index: 9997;
-}
-
-.header-nav ul {
-    display: flex;
-    gap: 70px;
-}
-
-.header-nav li {
-    color: #fff;
-    font-weight: bold;
-    font-family: zen-old-mincho, sans-serif;
-}
-
-.header_inner p{
-    color: #fff;
-    font-family: zen-old-mincho, sans-serif;
-} */
 
 .work{
     background-color:#edfafd ;
     margin-top: -450px;
+}
+@media screen and (max-width:1115px) {
+    .work{
+        margin-top: -300px;
+    }
+}
+
+.home_work{
+    margin-top: 150px;
 }
 
 .temp_contact{
@@ -49,61 +29,39 @@
     margin-bottom: 20px;
 }
 
+@media screen and (max-width:767px) {
+    #home_workall_SP{
+        display: block;
+    }
+    
 
-/* .footer{
-    background-color: #BBDED6;
+    #home_workall_SP{
+        margin-top: 200px;
+    }
+
+    @media screen and (max-width: 500px) {
+        #home_workall_SP {
+            margin-top: 250px;
+        }
+    }
+
+    #Bunner{
+        color: #008cff;
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 25px;
+    }
+
+    #Web-Site{
+        color: #008cff;
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 25px;
+    }
+
+    #home_workall_SP .work_mini li{
+        width: 50%;
+    }
 }
-
-.footer_inner {
-    max-width: 1000px;
-    display: flex;
-    padding-top: 82px;
-    margin: 0 auto;
-}
-
-.footer_inner .footer_text {
-    width: 227px;
-    height: 50px;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    position: relative;
-}
-
-.footer_inner .info {
-    margin-left: 65px;
-}
-
-.footer_inner .info p {
-    padding-bottom: 20px;
-    font-size: 20px;
-}
-
-.footer-nav ul {
-    display: flex;
-    gap: 70px;
-}
-
-.footer-nav li {
-    color: #003FFF;
-    font-weight: bold;
-    font-family: zen-old-mincho, sans-serif;
-}
-
-.footer_inner p{
-    color: #003FFF;
-    font-family: zen-old-mincho, sans-serif;
-}
-
-.fotter_nav a{
-    color: #003FFF;
-}
-
-#company {
-    font-family: zen-old-mincho, sans-serif;
-    text-align: center;
-    padding-top: 80px;
-    padding-bottom: 82px;
-    font-size: 12px;
-    color: #003FFF;
-} */
